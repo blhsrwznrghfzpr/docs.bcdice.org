@@ -383,7 +383,10 @@
                                 <h1 id="加算ダイス">加算ダイス</h1>
 <pre><code>xDy
 </code></pre><p><code>y</code>面ダイスを<code>x</code>個ダイスロールしてその合計を表示します。</p>
-<h2 id="目標値">目標値</h2>
+<h2 id="実行例">実行例</h2>
+<pre><code>[DiceBot]&gt; 2D6+2&gt;=7
+(2D6+2&gt;=7) ＞ 11[6,5]+2 ＞ 13 ＞ 成功
+</code></pre><h2 id="目標値">目標値</h2>
 <pre><code>2D6&gt;=7
 </code></pre><p>一般的な不等号の式と同じようにして目標値を記述できます。
 上記コマンドば6面ダイスを2個ダイスロールし、その合計が7以上か判定します。</p>
@@ -475,6 +478,16 @@
 </code></pre><p>通常のダイスロールと同様に、計算式に含めることができます。</p>
 <pre><code>[DiceBot]&gt; 3D6KH1+4&gt;=10
 (3D6KH1+4&gt;=10) ＞ 6[5,6,6]+4 ＞ 10 ＞ 成功
+</code></pre><h2 id="ゲームシステム固有の判定">ゲームシステム固有の判定</h2>
+<p>一部のゲームシステムでは特定のダイスロールを目標値を設定して実行した時に、共通の処理にはないクリティカル判定などを行う場合があります。たとえばシノビガミでは2D6の出目が6ゾロの場合、以下のようにスペシャルの効果が表示されます。</p>
+<pre><code>[ShinobiGami]&gt; 2D6&gt;=7
+(2D6&gt;=7) ＞ 12[6,6] ＞ 12 ＞ スペシャル(【生命力】1点か変調一つを回復)
+</code></pre><p>この特殊処理は目標値が設定されている場合のみ判定されます。</p>
+<pre><code>[ShinobiGami]&gt; 2D6
+(2D6) ＞ 12[6,6] ＞ 12
+</code></pre><p>目標値不明でこの特殊処理を行う場合には、目標値を<code>?</code>にしてください。</p>
+<pre><code>[ShinobiGami]&gt; 2D6&gt;=?
+(2D6&gt;=?) ＞ 2[1,1] ＞ 2 ＞ ファンブル
 </code></pre>
                                 
                                 </section>
@@ -518,7 +531,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"加算ダイス","level":"1.4.1","depth":2,"next":{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},"previous":{"title":"汎用コマンド","level":"1.4","depth":1,"path":"command/README.md","ref":"command/README.md","articles":[{"title":"加算ダイス","level":"1.4.1","depth":2,"path":"command/add_dice.md","ref":"command/add_dice.md","articles":[]},{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},{"title":"上方無限ロール","level":"1.4.4","depth":2,"path":"command/upper_dice.md","ref":"command/upper_dice.md","articles":[]},{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},{"title":"計算コマンド","level":"1.4.6","depth":2,"path":"command/calc.md","ref":"command/calc.md","articles":[]},{"title":"チョイスコマンド","level":"1.4.7","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},{"title":"繰り返しコマンド","level":"1.4.8","depth":2,"path":"command/repeat.md","ref":"command/repeat.md","articles":[]},{"title":"Versionコマンド","level":"1.4.9","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/add_dice.md","mtime":"2020-12-26T16:07:28.309Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-26T16:07:40.564Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"加算ダイス","level":"1.4.1","depth":2,"next":{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},"previous":{"title":"汎用コマンド","level":"1.4","depth":1,"path":"command/README.md","ref":"command/README.md","articles":[{"title":"加算ダイス","level":"1.4.1","depth":2,"path":"command/add_dice.md","ref":"command/add_dice.md","articles":[]},{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},{"title":"上方無限ロール","level":"1.4.4","depth":2,"path":"command/upper_dice.md","ref":"command/upper_dice.md","articles":[]},{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},{"title":"計算コマンド","level":"1.4.6","depth":2,"path":"command/calc.md","ref":"command/calc.md","articles":[]},{"title":"チョイスコマンド","level":"1.4.7","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},{"title":"繰り返しコマンド","level":"1.4.8","depth":2,"path":"command/repeat.md","ref":"command/repeat.md","articles":[]},{"title":"Versionコマンド","level":"1.4.9","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/add_dice.md","mtime":"2020-12-26T16:10:49.148Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-26T16:10:55.990Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
