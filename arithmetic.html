@@ -1,0 +1,544 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <title>四則演算 · BCDiceコマンドガイド</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.16">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="command/" />
+    
+    
+    <link rel="prev" href="basic_principles.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    BCDiceコマンドガイド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic_principles.html">
+            
+                <a href="basic_principles.html">
+            
+                    
+                    コマンド入力の基本原則
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="arithmetic.html">
+            
+                <a href="arithmetic.html">
+            
+                    
+                    四則演算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="command/">
+            
+                <a href="command/">
+            
+                    
+                    汎用コマンド
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="command/add_dice.html">
+            
+                <a href="command/add_dice.html">
+            
+                    
+                    加算ダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="command/barabara_dice.html">
+            
+                <a href="command/barabara_dice.html">
+            
+                    
+                    バラバラダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="command/reroll_dice.html">
+            
+                <a href="command/reroll_dice.html">
+            
+                    
+                    個数振り足しダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="command/upper_dice.html">
+            
+                <a href="command/upper_dice.html">
+            
+                    
+                    上方無限ロール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="command/d66_dice.html">
+            
+                <a href="command/d66_dice.html">
+            
+                    
+                    D66
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="command/calc.html">
+            
+                <a href="command/calc.html">
+            
+                    
+                    計算コマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="command/choice.html">
+            
+                <a href="command/choice.html">
+            
+                    
+                    チョイスコマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="command/repeat.html">
+            
+                <a href="command/repeat.html">
+            
+                    
+                    繰り返しコマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="command/version.html">
+            
+                <a href="command/version.html">
+            
+                    
+                    Versionコマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="secret.html">
+            
+                <a href="secret.html">
+            
+                    
+                    シークレットダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="original_table.html">
+            
+                <a href="original_table.html">
+            
+                    
+                    オリジナル表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://bcdice.org/">
+            
+                    
+                    公式Webサイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="https://discord.gg/D5CazXH">
+            
+                    
+                    Discordサーバー
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <a target="_blank" href="https://github.com/bcdice/BCDice">
+            
+                    
+                    ソースコード
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >四則演算</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="四則演算">四則演算</h1>
+<p>BCDiceのコマンドには四則演算を含めることができます。
+この四則演算は日常生活で用いる計算式とは少し違うルールで動いているので、ここで細かい規則を紹介します。</p>
+<h2 id="使える演算子">使える演算子</h2>
+<p>利用できる演算子は以下の4つです。</p>
+<ul>
+<li><code>+</code>：足し算</li>
+<li><code>-</code>：引き算</li>
+<li><code>*</code>：掛け算</li>
+<li><code>/</code>：割り算</li>
+</ul>
+<h2 id="演算子の優先順位">演算子の優先順位</h2>
+<p>一般的な計算式と同様に、<code>*</code>, <code>/</code> → <code>+</code>, <code>-</code> の順で実行されます。</p>
+<pre><code>1+2*3 -&gt; 7
+</code></pre><p>計算順序を操作したい場合にはカッコが使えます。</p>
+<pre><code>(1+2)*3 -&gt; 9
+</code></pre><h2 id="掛け算">掛け算</h2>
+<p>掛け算は必ず<code>*</code>を使う必要があります。カッコの前に数字を置く省略記法は処理できません。</p>
+<h4 id="ok">OK</h4>
+<pre><code>2*(1+2)
+</code></pre><h4 id="ng">NG</h4>
+<pre><code>2(1+2)
+</code></pre><h2 id="割り算">割り算</h2>
+<p>BCDiceは整数のみを扱うため、割り算で発生する小数点以下は丸められます。
+丸めは切り捨て、切り上げ、四捨五入の3種類あり、計算式の中で指定できます。
+指定されない場合、ゲームシステムによって挙動が変わります。</p>
+<h3 id="基本">基本</h3>
+<pre><code>1/2 -&gt; 0か1かはゲームシステムの設定による
+</code></pre><p>割り算の項の末尾に<code>F</code>, <code>C</code>, <code>U</code>, <code>R</code>をつけると小数点以下の扱いを指定できます。</p>
+<h3 id="切り捨て-f">切り捨て <code>F</code></h3>
+<pre><code>1/2F -&gt; 0
+</code></pre><p><code>F</code> は floor の略</p>
+<h3 id="切り上げ-c-u">切り上げ <code>C</code>, <code>U</code></h3>
+<pre><code>1/2U -&gt; 0
+</code></pre><p><code>C</code> は ceil の、<code>U</code> は round up 略</p>
+<h3 id="四捨五入-r">四捨五入 <code>R</code></h3>
+<pre><code>5/10R -&gt; 0.5 -&gt; 1
+</code></pre><pre><code>4/10R -&gt; 0.4 -&gt; 0
+</code></pre><p><code>R</code> は round の略</p>
+<h3 id="式中で複数の丸めを指定する">式中で複数の丸めを指定する</h3>
+<p>丸めの指定は割り算の項の末尾に書くため、式の中で項ごとにそれぞれ指定します。</p>
+<pre><code>1/2F+5/10R -&gt; 0.5 + 0.5 -&gt; 0 + 1 -&gt; 1
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basic_principles.html" class="navigation navigation-prev " aria-label="Previous page: コマンド入力の基本原則">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="command/" class="navigation navigation-next " aria-label="Next page: 汎用コマンド">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"四則演算","level":"1.3","depth":1,"next":{"title":"汎用コマンド","level":"1.4","depth":1,"path":"command/README.md","ref":"command/README.md","articles":[{"title":"加算ダイス","level":"1.4.1","depth":2,"path":"command/add_dice.md","ref":"command/add_dice.md","articles":[]},{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},{"title":"上方無限ロール","level":"1.4.4","depth":2,"path":"command/upper_dice.md","ref":"command/upper_dice.md","articles":[]},{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},{"title":"計算コマンド","level":"1.4.6","depth":2,"path":"command/calc.md","ref":"command/calc.md","articles":[]},{"title":"チョイスコマンド","level":"1.4.7","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},{"title":"繰り返しコマンド","level":"1.4.8","depth":2,"path":"command/repeat.md","ref":"command/repeat.md","articles":[]},{"title":"Versionコマンド","level":"1.4.9","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]}]},"previous":{"title":"コマンド入力の基本原則","level":"1.2","depth":1,"path":"basic_principles.md","ref":"basic_principles.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"arithmetic.md","mtime":"2020-12-26T04:15:56.754Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-26T11:48:03.257Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

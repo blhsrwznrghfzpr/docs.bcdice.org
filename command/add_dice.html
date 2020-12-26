@@ -1,0 +1,597 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <title>加算ダイス · BCDiceコマンドガイド</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 3.6.16">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="barabara_dice.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    BCDiceコマンドガイド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basic_principles.html">
+            
+                <a href="../basic_principles.html">
+            
+                    
+                    コマンド入力の基本原則
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../arithmetic.html">
+            
+                <a href="../arithmetic.html">
+            
+                    
+                    四則演算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    汎用コマンド
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="add_dice.html">
+            
+                <a href="add_dice.html">
+            
+                    
+                    加算ダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="barabara_dice.html">
+            
+                <a href="barabara_dice.html">
+            
+                    
+                    バラバラダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="reroll_dice.html">
+            
+                <a href="reroll_dice.html">
+            
+                    
+                    個数振り足しダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="upper_dice.html">
+            
+                <a href="upper_dice.html">
+            
+                    
+                    上方無限ロール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="d66_dice.html">
+            
+                <a href="d66_dice.html">
+            
+                    
+                    D66
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="calc.html">
+            
+                <a href="calc.html">
+            
+                    
+                    計算コマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="choice.html">
+            
+                <a href="choice.html">
+            
+                    
+                    チョイスコマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="repeat.html">
+            
+                <a href="repeat.html">
+            
+                    
+                    繰り返しコマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="version.html">
+            
+                <a href="version.html">
+            
+                    
+                    Versionコマンド
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../secret.html">
+            
+                <a href="../secret.html">
+            
+                    
+                    シークレットダイス
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../original_table.html">
+            
+                <a href="../original_table.html">
+            
+                    
+                    オリジナル表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://bcdice.org/">
+            
+                    
+                    公式Webサイト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="https://discord.gg/D5CazXH">
+            
+                    
+                    Discordサーバー
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" >
+            
+                <a target="_blank" href="https://github.com/bcdice/BCDice">
+            
+                    
+                    ソースコード
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >加算ダイス</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="加算ダイス">加算ダイス</h1>
+<pre><code>xDy
+</code></pre><p><code>y</code>面ダイスを<code>x</code>個ダイスロールしてその合計を表示します。</p>
+<h2 id="目標値">目標値</h2>
+<pre><code>2D6&gt;=7
+</code></pre><p>一般的な不等号の式と同じようにして目標値を記述できます。
+上記コマンドば6面ダイスを2個ダイスロールし、その合計が7以上か判定します。</p>
+<p>比較記号は他のコマンドと同様に以下の記号を指定できます。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">記号</th>
+<th style="text-align:left">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&gt;=</code></td>
+<td style="text-align:left">以上</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&gt;</code></td>
+<td style="text-align:left">より大きい</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;</code></td>
+<td style="text-align:left">未満</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;=</code></td>
+<td style="text-align:left">以下</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>==</code>, <code>=</code></td>
+<td style="text-align:left">等しい</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>!=</code>, <code>&lt;&gt;</code></td>
+<td style="text-align:left">異なる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="四則演算を活用する">四則演算を活用する</h2>
+<p><code>xDy</code>の表記はランダム性のある数字のように扱うことができ、四則演算と組み合わせて自由度の高い記述をすることができます。
+<code>x</code>や<code>y</code>の部分にも数式を入れることができます。四則演算の詳しい仕様は<a href="../arithmetic.html">四則演算</a>をご覧ください。</p>
+<h4 id="ok">OK</h4>
+<pre><code>2D6+2&gt;=7+4
+</code></pre><pre><code>(2D6+2)*6&lt;(10+2)*2
+</code></pre><pre><code>(1+3)D(2+2)
+</code></pre><pre><code>2D6+1D100*4D3
+</code></pre><h4 id="ng">NG</h4>
+<p>目標値にダイスロールを含めることはできません</p>
+<pre><code>1D10&gt;=2D6
+</code></pre><p><code>x</code>や<code>y</code>の部分にダイスロールを含めることはできません</p>
+<pre><code>(1D6)D6
+</code></pre><h2 id="出目を選別する">出目を選別する</h2>
+<p>ダイス表記の後に<code>KH3</code>のように追記することで、ダイスロールした出目の中で大きい出目から何個かを採用してその合計を求める、といったことができます。</p>
+<p>選別の動きは以下の4種類です。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">コマンド</th>
+<th style="text-align:left">動き</th>
+<th style="text-align:left">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>xDyKHn</code></td>
+<td style="text-align:left">出目の大きい方から<code>n</code>個を採用する</td>
+<td style="text-align:left">Keep Highest</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>xDyKLn</code></td>
+<td style="text-align:left">出目の小さい方から<code>n</code>個を採用する</td>
+<td style="text-align:left">Keep Lowest</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>xDyDHn</code></td>
+<td style="text-align:left">出目の大きい方から<code>n</code>個を取り除く</td>
+<td style="text-align:left">Drop Highest</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>xDyDLn</code></td>
+<td style="text-align:left">出目の小さい方から<code>n</code>個を取り除く</td>
+<td style="text-align:left">Drop Lowest</td>
+</tr>
+</tbody>
+</table>
+<p>以下の例では、6面ダイスを5個ダイスロールして大きい出目3個の合計を表示しています。</p>
+<pre><code>[DiceBot]&gt; 5D6KH3
+(5D6KH3) ＞ 17[2,2,5,6,6] ＞ 17
+</code></pre><p>通常のダイスロールと同様に、計算式に含めることができます。</p>
+<pre><code>[DiceBot]&gt; 3D6KH1+4&gt;=10
+(3D6KH1+4&gt;=10) ＞ 6[5,6,6]+4 ＞ 10 ＞ 成功
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 汎用コマンド">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="barabara_dice.html" class="navigation navigation-next " aria-label="Next page: バラバラダイス">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"加算ダイス","level":"1.4.1","depth":2,"next":{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},"previous":{"title":"汎用コマンド","level":"1.4","depth":1,"path":"command/README.md","ref":"command/README.md","articles":[{"title":"加算ダイス","level":"1.4.1","depth":2,"path":"command/add_dice.md","ref":"command/add_dice.md","articles":[]},{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},{"title":"上方無限ロール","level":"1.4.4","depth":2,"path":"command/upper_dice.md","ref":"command/upper_dice.md","articles":[]},{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},{"title":"計算コマンド","level":"1.4.6","depth":2,"path":"command/calc.md","ref":"command/calc.md","articles":[]},{"title":"チョイスコマンド","level":"1.4.7","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},{"title":"繰り返しコマンド","level":"1.4.8","depth":2,"path":"command/repeat.md","ref":"command/repeat.md","articles":[]},{"title":"Versionコマンド","level":"1.4.9","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/add_dice.md","mtime":"2020-12-26T11:36:27.142Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-26T11:48:03.257Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
