@@ -381,10 +381,12 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="繰り返しコマンド">繰り返しコマンド</h1>
-<pre><code>x[繰り返し回数] [繰り返すコマンド]
-rep[繰り返し回数] [繰り返すコマンド]
-repeat[繰り返し回数] [繰り返すコマンド]
-</code></pre><p><code>[繰り返すコマンド]</code>を<code>[繰り返し回数]</code>回実行して、それぞれの結果を出力します。</p>
+<pre><code>x[繰り返し回数]˽[繰り返すコマンド]
+rep[繰り返し回数]˽[繰り返すコマンド]
+repeat[繰り返し回数]˽[繰り返すコマンド]
+</code></pre><p>※ <code>˽</code>は半角スペースの代わりに表記しています</p>
+<p><code>[繰り返すコマンド]</code>を<code>[繰り返し回数]</code>回実行して、それぞれの結果を出力します。
+<code>x</code> <code>rep</code> <code>repeat</code>は全て同じ動作をします。好みに応じて使い分けてください。</p>
 <h2 id="実行例">実行例</h2>
 <p><code>2D6+2</code>を3回繰り返す場合には<code>x3 2D6+2</code>と入力します。</p>
 <pre><code>[DiceBot]&gt; x3 2D6+2
@@ -457,7 +459,7 @@ repeat[繰り返し回数] [繰り返すコマンド]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"繰り返しコマンド","level":"1.4.8","depth":2,"next":{"title":"Versionコマンド","level":"1.4.9","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]},"previous":{"title":"チョイスコマンド","level":"1.4.7","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/repeat.md","mtime":"2020-12-27T04:58:00.431Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-27T04:58:08.407Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"繰り返しコマンド","level":"1.4.8","depth":2,"next":{"title":"Versionコマンド","level":"1.4.9","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]},"previous":{"title":"チョイスコマンド","level":"1.4.7","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/repeat.md","mtime":"2020-12-27T05:29:43.330Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-27T05:29:57.788Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
