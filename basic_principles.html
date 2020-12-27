@@ -387,14 +387,18 @@
 <h3 id="半角スペースより前をコマンドとして扱う">半角スペースより前をコマンドとして扱う</h3>
 <p>コマンド部分とコメント部分を、半角スペースを基準に区別しています。
 テキストに半角スペースがない場合には、テキストの末尾までをコマンドだと解釈します。</p>
+<p>全角スペースは半角スペースと区別され、全角スペースは他の文字と同様に扱われます。</p>
 <h4 id="ok">OK</h4>
 <pre><code>2D6&gt;=7 命中判定！
 </code></pre><pre><code>2D6&gt;=7
+</code></pre><pre><code>2D6&gt;=7 コメントには　全角スペースが 利用可能
 </code></pre><h4 id="ng">NG</h4>
 <pre><code>2D6 &gt;= 7 命中判定！
 </code></pre><p><code>&gt;=</code>の前に半角スペースがあるので、コマンド<code>2D6</code>が実行されます。</p>
 <pre><code>2D6&gt;=7命中判定！
 </code></pre><p>式とコメントが区切られていないため、実行できません。</p>
+<pre><code>2D6&gt;=7　命中判定！
+</code></pre><p>半角スペースでなく全角スペースで区切られているため、入力全体がコマンド扱いになり実行できません。</p>
 <h3 id="大文字と小文字は区別しない">大文字と小文字は区別しない</h3>
 <p><code>2D6</code>、<code>2d6</code>のどちらで入力しても実行でき、同じ入力として扱われます。</p>
 <h4 id="ok">OK</h4>
@@ -467,7 +471,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"コマンド入力の基本原則","level":"1.2","depth":1,"next":{"title":"四則演算","level":"1.3","depth":1,"path":"arithmetic.md","ref":"arithmetic.md","articles":[]},"previous":{"title":"BCDiceコマンドガイド","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"basic_principles.md","mtime":"2020-12-26T16:25:36.841Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-26T16:25:45.529Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"コマンド入力の基本原則","level":"1.2","depth":1,"next":{"title":"四則演算","level":"1.3","depth":1,"path":"arithmetic.md","ref":"arithmetic.md","articles":[]},"previous":{"title":"BCDiceコマンドガイド","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"basic_principles.md","mtime":"2020-12-27T04:58:00.431Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-27T04:58:08.407Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
