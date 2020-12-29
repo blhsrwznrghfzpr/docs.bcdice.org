@@ -382,20 +382,23 @@
                                 
                                 <h1 id="上方無限ロール">上方無限ロール</h1>
 <p>上方無限ロール<code>nUx</code>はダイスの振り足しを行うことで、何個のダイスグループが条件を満たすことができるか調べるコマンドです。</p>
-<p>ダイス1つを振り、その出目が閾値より大きければダイスを振り足す、を閾値未満の出目が出るまで繰り返します。
-これらのダイスの集合をダイスグループと呼びます。
-ダイスグループごとに合計値を求めて目標値を比較し、成功した数を表示します。</p>
 <p>コマンドの形式は以下の通りです。</p>
 <pre><code>aUx+nUm+...+xUy[振り足し]+修正値&gt;=目標値
 aUx+nUm+...+xUy+修正値&gt;=目標値@振り足し
-</code></pre><h2 id="実行例">実行例</h2>
+</code></pre><p><code>nUx</code>と記述した場合、ダイスグループを<code>n</code>個作成し、それらのダイスグループには<code>x</code>面ダイスが1つずつ割り当てられます。</p>
+<p>処理はダイスグループごとに行われます。まず、最初に割り当てられたダイスを1つをダイスロールします。
+その出目が<code>振り足し</code>より大きければもう一回ダイスロールを行ってダイスグループに値を追加します。
+追加の出目についても<code>振り足し</code>との比較を行い、条件を満たす限り追加のダイスロールを繰り返します。</p>
+<p>全ての振り足しが完了したら、ダイスグループごとに出目の合計値を求めて目標値と比較します。
+目標の条件を満たしら成功とし、成功したダイスグループの数を最終結果として表示します。</p>
+<h2 id="実行例">実行例</h2>
 <pre><code>[DiceBot]&gt; 2U4+1U6[4]&gt;=6
 (2U4+1U6[4]&gt;=6) ＞ 5[4,1],15[4,4,4,3],3 ＞ 成功数1
-</code></pre><p>上記コマンドでは4面ダイス2個、6面ダイス1個を使い、振り足しの条件は4以上、成功の条件は6以上となっています。
-ダイスロールの結果を細かく分解すると以下のようになっています。</p>
-<pre><code>4面a: 5[4,1]
-4面b: 15[4,4,4,3]
-6面: 3
+</code></pre><p>上記コマンドでは4面ダイスのダイスグループが2つ、6面ダイスのダイスグループが1つで、振り足しの条件は4以上、成功の条件は6以上となっています。わかりやすくするために、4面ダイスのダイスグループをそれぞれ<code>4面a</code>と<code>4面b</code>、6面ダイスのダイスグループを<code>6面</code>と書くことにします。</p>
+<p>書くダイスグループごとの動きは以下の通りです。</p>
+<pre><code>4面a: 4 -(振り足し)-&gt; 1 (終了) : 5[4,1]
+4面b: 4 -(振り足し)-&gt; 4 -(振り足し)-&gt; 4 -(振り足し)-&gt; 3 (終了) : 15[4,4,4,3]
+6面: 3 (終了) : 3[3]
 </code></pre><p><code>4面a</code>は1回目の出目が4以上だったので振り足しが行われ、2回目は1だったのでそこで終了し、合計5となりました。
 <code>4面b</code>は1回目の出目が4以上だったので振り足しが行われ、その後も4が続き、合計15となりました。
 <code>6面</code>は出目が3で振り足し条件を満たさなかったため、振り足しが行われませんでした。</p>
@@ -510,7 +513,7 @@ aUx+nUm+...+xUy+修正値&gt;=目標値@振り足し
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"上方無限ロール","level":"1.4.4","depth":2,"next":{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},"previous":{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/upper_dice.md","mtime":"2020-12-28T09:43:33.373Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-28T09:43:40.131Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"上方無限ロール","level":"1.4.4","depth":2,"next":{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},"previous":{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/upper_dice.md","mtime":"2020-12-29T16:25:47.785Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-29T16:25:59.086Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
