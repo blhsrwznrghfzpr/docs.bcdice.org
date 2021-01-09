@@ -395,7 +395,7 @@ aUx+nUm+...+xUy+修正値&gt;=目標値@振り足し
 <pre><code>[DiceBot]&gt; 2U4+1U6[4]&gt;=6
 (2U4+1U6[4]&gt;=6) ＞ 5[4,1],15[4,4,4,3],3 ＞ 成功数1
 </code></pre><p>上記コマンドでは4面ダイスのダイスグループが2つ、6面ダイスのダイスグループが1つで、振り足しの条件は4以上、成功の条件は6以上となっています。わかりやすくするために、4面ダイスのダイスグループをそれぞれ<code>4面a</code>と<code>4面b</code>、6面ダイスのダイスグループを<code>6面</code>と書くことにします。</p>
-<p>書くダイスグループごとの動きは以下の通りです。</p>
+<p>各ダイスグループごとの動きは以下の通りです。</p>
 <pre><code>4面a: 4 -(振り足し)-&gt; 1 (終了) : 5[4,1]
 4面b: 4 -(振り足し)-&gt; 4 -(振り足し)-&gt; 4 -(振り足し)-&gt; 3 (終了) : 15[4,4,4,3]
 6面: 3 (終了) : 3[3]
@@ -403,7 +403,7 @@ aUx+nUm+...+xUy+修正値&gt;=目標値@振り足し
 <code>4面b</code>は1回目の出目が4以上だったので振り足しが行われ、その後も4が続き、合計15となりました。
 <code>6面</code>は出目が3で振り足し条件を満たさなかったため、振り足しが行われませんでした。</p>
 <p>各ダイスグループの合計と成功条件<code>&gt;=6</code>を比較すると、条件に合致するのは<code>4面b</code>1つであるため、成功数1と表示されました。</p>
-<h2 id="振り直しの閾値">振り直しの閾値</h2>
+<h2 id="振り足しの閾値">振り足しの閾値</h2>
 <p>ダイス目が<code>[]</code>か<code>@</code>で指定された数以上であればダイスの振り足しが行われます。</p>
 <p><code>[]</code>はダイスの末尾に書きます</p>
 <pre><code>2U6[4]&gt;=10
@@ -513,7 +513,7 @@ aUx+nUm+...+xUy+修正値&gt;=目標値@振り足し
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"上方無限ロール","level":"1.4.4","depth":2,"next":{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},"previous":{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/upper_dice.md","mtime":"2020-12-30T15:39:40.994Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2020-12-30T15:39:47.535Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"上方無限ロール","level":"1.4.4","depth":2,"next":{"title":"D66","level":"1.4.5","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},"previous":{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/upper_dice.md","mtime":"2021-01-09T07:08:50.026Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2021-01-09T07:08:58.624Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
