@@ -3,7 +3,7 @@
 <html lang="ja" >
     <head>
         <meta charset="UTF-8">
-        <title>加算ダイス · BCDiceコマンドガイド</title>
+        <title>集計ダイス · BCDiceコマンドガイド</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.6.16">
@@ -56,10 +56,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="barabara_dice.html" />
+    <link rel="next" href="d66_dice.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="upper_dice.html" />
     
 
     </head>
@@ -141,7 +141,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="add_dice.html">
+        <li class="chapter " data-level="1.4.1" data-path="add_dice.html">
             
                 <a href="add_dice.html">
             
@@ -193,7 +193,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="tally_dice.html">
+        <li class="chapter active" data-level="1.4.5" data-path="tally_dice.html">
             
                 <a href="tally_dice.html">
             
@@ -378,7 +378,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >加算ダイス</a>
+        <a href=".." >集計ダイス</a>
     </h1>
 </div>
 
@@ -393,119 +393,23 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="加算ダイス">加算ダイス</h1>
-<pre><code>xDy
-</code></pre><p><code>y</code>面ダイスを<code>x</code>個ダイスロールしてその合計を表示します。</p>
+                                <h1 id="集計ダイス-（350から）">集計ダイス <span style="font-size: 0.6em; font-weight: 500;">（3.5.0から）</span></h1>
+<pre><code>xTYy
+xTZy
+</code></pre><p><code>y</code>面ダイスを<code>x</code>個ダイスロールして、それぞれの面が出た個数を集計して表示します。</p>
 <h2 id="実行例">実行例</h2>
-<pre><code>[DiceBot]&gt; 2D6+2&gt;=7
-(2D6+2&gt;=7) ＞ 11[6,5]+2 ＞ 13 ＞ 成功
-</code></pre><h2 id="目標値">目標値</h2>
-<pre><code>2D6&gt;=7
-</code></pre><p>一般的な不等号の式と同じようにして目標値を記述できます。
-上記コマンドば6面ダイスを2個ダイスロールし、その合計が7以上か判定します。</p>
-<p>比較記号は他のコマンドと同様に以下の記号を指定できます。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">記号</th>
-<th style="text-align:left">意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>&gt;=</code></td>
-<td style="text-align:left">以上</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>&gt;</code></td>
-<td style="text-align:left">より大きい</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>&lt;</code></td>
-<td style="text-align:left">未満</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>&lt;=</code></td>
-<td style="text-align:left">以下</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>==</code>, <code>=</code></td>
-<td style="text-align:left">等しい</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>!=</code>, <code>&lt;&gt;</code></td>
-<td style="text-align:left">異なる</td>
-</tr>
-</tbody>
-</table>
-<h2 id="四則演算を活用する">四則演算を活用する</h2>
-<p><code>xDy</code>の表記はランダム性のある数字のように扱うことができ、四則演算と組み合わせて自由度の高い記述をすることができます。
-<code>x</code>や<code>y</code>の部分にも数式を入れることができます。四則演算の詳しい仕様は<a href="../arithmetic.html">四則演算</a>をご覧ください。</p>
-<h4 id="ok">OK</h4>
-<pre><code>2D6+2&gt;=7+4
-</code></pre><pre><code>(2D6+2)*6&lt;(10+2)*2
-</code></pre><pre><code>(1+3)D(2+2)
-</code></pre><pre><code>2D6+1D100*4D3
-</code></pre><h4 id="ng">NG</h4>
-<p>目標値にダイスロールを含めることはできません</p>
-<pre><code>1D10&gt;=2D6
-</code></pre><p><code>x</code>や<code>y</code>の部分にダイスロールを含めることはできません</p>
-<pre><code>(1D6)D6
-</code></pre><h2 id="出目を選別する">出目を選別する</h2>
-<p>ダイス表記の後に<code>KH3</code>のように追記することで、ダイスロールした出目の中で大きい出目から何個かを採用してその合計を求める、といったことができます。</p>
-<p>選別の動きは以下の4種類です。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">コマンド</th>
-<th style="text-align:left">動き</th>
-<th style="text-align:left">意味</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>xDyKHn</code></td>
-<td style="text-align:left">出目の大きい方から<code>n</code>個を採用する</td>
-<td style="text-align:left">Keep Highest</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>xDyKLn</code></td>
-<td style="text-align:left">出目の小さい方から<code>n</code>個を採用する</td>
-<td style="text-align:left">Keep Lowest</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>xDyDHn</code></td>
-<td style="text-align:left">出目の大きい方から<code>n</code>個を取り除く</td>
-<td style="text-align:left">Drop Highest</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>xDyDLn</code></td>
-<td style="text-align:left">出目の小さい方から<code>n</code>個を取り除く</td>
-<td style="text-align:left">Drop Lowest</td>
-</tr>
-</tbody>
-</table>
-<p>以下の例では、6面ダイスを5個ダイスロールして大きい出目3個の合計を表示しています。</p>
-<pre><code>[DiceBot]&gt; 5D6KH3
-(5D6KH3) ＞ 17[2,2,5,6,6] ＞ 17
-</code></pre><p>通常のダイスロールと同様に、計算式に含めることができます。</p>
-<pre><code>[DiceBot]&gt; 3D6KH1+4&gt;=10
-(3D6KH1+4&gt;=10) ＞ 6[5,6,6]+4 ＞ 10 ＞ 成功
-</code></pre><h2 id="ゲームシステム固有の判定">ゲームシステム固有の判定</h2>
-<p>一部のゲームシステムでは特定のダイスロールを目標値を設定して実行した時に、共通の処理にはないクリティカル判定などを行う場合があります。たとえばシノビガミでは2D6の出目が6ゾロの場合、以下のようにスペシャルの効果が表示されます。</p>
-<pre><code>[ShinobiGami]&gt; 2D6&gt;=7
-(2D6&gt;=7) ＞ 12[6,6] ＞ 12 ＞ スペシャル(【生命力】1点か変調一つを回復)
-</code></pre><p>この特殊処理は目標値が設定されている場合のみ判定されます。</p>
-<pre><code>[ShinobiGami]&gt; 2D6
-(2D6) ＞ 12[6,6] ＞ 12
-</code></pre><p>目標値不明でこの特殊処理を行う場合には、目標値を<code>?</code>にしてください。</p>
-<pre><code>[ShinobiGami]&gt; 2D6&gt;=?
-(2D6&gt;=?) ＞ 2[1,1] ＞ 2 ＞ ファンブル
-</code></pre><h2 id="d66">D66</h2>
-<p>面数が66の場合、6面ダイスを2個ダイスロールして値を決めるD66になります。</p>
-<pre><code>[DiceBot]&gt; 2d66
-(2D66) ＞ 30[14,16] ＞ 30
-</code></pre>
+<pre><code>[DiceBot]&gt; 8TY6
+(8TY6) ＞ 2,4,2,6,2,1,4,3 ＞ [1]×1, [2]×3, [3]×1, [4]×2, [6]×1
+[DiceBot]&gt; 8TZ6
+(8TZ6) ＞ 6,5,6,5,1,5,6,1 ＞ [1]×2, [2]×0, [3]×0, [4]×0, [5]×3, [6]×3
+</code></pre><p>出力 <code>[1]×1, [2]×3, [3]×1, [4]×2, [6]×1</code> はダイスロールの集計結果が、出目1が1個、出目2が3個、出目3が1個、出目4が2個、出目6が1個、であることを表します。</p>
+<p><code>TY</code>と<code>TZ</code>では同じ出目でも表示結果が変わります。<code>TY</code>では出現しなかった出目の表示が省略されます。<code>TZ</code>では出現した個数に関わらず、全ての面の個数が表示されます。</p>
+<h2 id="備考">備考</h2>
+<ul>
+<li>ダイスの面数<code>y</code>は20以下である必要があります。この制限は今後のアップデートで緩和される可能性があります。</li>
+<li><code>TY</code> は集計を意味する英語 <code>tally</code> の略、<code>TZ</code> は <code>tally with zero</code> の略です。</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -532,12 +436,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 汎用コマンド">
+                <a href="upper_dice.html" class="navigation navigation-prev " aria-label="Previous page: 上方無限ロール">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="barabara_dice.html" class="navigation navigation-next " aria-label="Next page: バラバラダイス">
+                <a href="d66_dice.html" class="navigation navigation-next " aria-label="Next page: D66">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -548,7 +452,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"加算ダイス","level":"1.4.1","depth":2,"next":{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},"previous":{"title":"汎用コマンド","level":"1.4","depth":1,"path":"command/README.md","ref":"command/README.md","articles":[{"title":"加算ダイス","level":"1.4.1","depth":2,"path":"command/add_dice.md","ref":"command/add_dice.md","articles":[]},{"title":"バラバラダイス","level":"1.4.2","depth":2,"path":"command/barabara_dice.md","ref":"command/barabara_dice.md","articles":[]},{"title":"個数振り足しダイス","level":"1.4.3","depth":2,"path":"command/reroll_dice.md","ref":"command/reroll_dice.md","articles":[]},{"title":"上方無限ロール","level":"1.4.4","depth":2,"path":"command/upper_dice.md","ref":"command/upper_dice.md","articles":[]},{"title":"集計ダイス","level":"1.4.5","depth":2,"path":"command/tally_dice.md","ref":"command/tally_dice.md","articles":[]},{"title":"D66","level":"1.4.6","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},{"title":"計算コマンド","level":"1.4.7","depth":2,"path":"command/calc.md","ref":"command/calc.md","articles":[]},{"title":"チョイスコマンド","level":"1.4.8","depth":2,"path":"command/choice.md","ref":"command/choice.md","articles":[]},{"title":"繰り返しコマンド","level":"1.4.9","depth":2,"path":"command/repeat.md","ref":"command/repeat.md","articles":[]},{"title":"Versionコマンド","level":"1.4.10","depth":2,"path":"command/version.md","ref":"command/version.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/add_dice.md","mtime":"2021-12-29T05:06:12.865Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2021-12-29T05:06:26.507Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"集計ダイス","level":"1.4.5","depth":2,"next":{"title":"D66","level":"1.4.6","depth":2,"path":"command/d66_dice.md","ref":"command/d66_dice.md","articles":[]},"previous":{"title":"上方無限ロール","level":"1.4.4","depth":2,"path":"command/upper_dice.md","ref":"command/upper_dice.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"BCDiceコマンドガイド","language":"ja","gitbook":"*"},"file":{"path":"command/tally_dice.md","mtime":"2021-12-29T05:06:12.869Z","type":"markdown"},"gitbook":{"version":"3.6.16","time":"2021-12-29T05:06:26.507Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
